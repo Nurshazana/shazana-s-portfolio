@@ -839,3 +839,72 @@ body.dark-mode .navbar .nav-link,
 body.dark-mode .navbar .navbar-brand {
     color: #ffffff; /* makes navbar links visible in dark mode */
 }
+
+/* =========================
+   PROJECT MODAL STYLES
+========================= */
+
+.project-modal-content {
+    background-color: #1e1e24;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.project-modal-header {
+    background-color: #141418;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 12px 20px;
+}
+
+.window-dots .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-red { background-color: #ff5f56; }
+.dot-yellow { background-color: #ffbd2e; }
+.dot-green { background-color: #27c93f; }
+
+.project-modal-desc {
+    color: #cccccc;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.project-modal-img-wrapper img {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Light mode support for modals */
+body:not(.dark-mode) .project-modal-content {
+    background-color: #25252b;
+    color: #ffffff;
+}
+/* =========================
+   PROJECTS GRID (3 COLUMNS)
+========================= */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* Responsive adjustments for tablets and mobile */
+@media (max-width: 991px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+    }
+}
+
+@media (max-width: 576px) {
+    .projects-grid {
+        grid-template-columns: 1fr; /* 1 per row on mobile phones */
+    }
+}
