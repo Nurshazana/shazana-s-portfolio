@@ -824,4 +824,18 @@ footer p {
     }
 
 }
+/* Light mode navbar styling */
+.navbar {
+    background-color: #ffffff; /* or your preferred light mode navbar background */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
+/* Dark mode navbar styling */
+body.dark-mode .navbar {
+    background-color: #121212; /* your dark mode background color */
+}
+
+body.dark-mode .navbar .nav-link,
+body.dark-mode .navbar .navbar-brand {
+    color: #ffffff; /* makes navbar links visible in dark mode */
+}
