@@ -2,44 +2,46 @@
    MOBILE MENU & TOGGLE
 ========================= */
 
+/* =========================
+   MOBILE MENU & TOGGLE
+========================= */
+
 const menuButton = document.getElementById("menuButton");
 const navbarMenu = document.getElementById("navbarMenu");
 const navLinks = document.querySelectorAll(".nav-link");
 
 if (menuButton && navbarMenu) {
+    // Toggle menu open/close on button click
     menuButton.addEventListener("click", function () {
         navbarMenu.classList.toggle("show");
-
-        const icon = menuButton.querySelector("i");
-        if (icon) {
-            if (navbarMenu.classList.contains("show")) {
-                icon.classList.remove("fa-bars");
-                icon.classList.add("fa-xmark");
-            } else {
-                icon.classList.remove("fa-xmark");
-                icon.classList.add("fa-bars");
-            }
-        }
+        updateMenuIcon();
     });
 }
 
-/* Close mobile menu on link click */
+// Function to update icon state between bars and X
+function updateMenuIcon() {
+    if (!menuButton) return;
+    const icon = menuButton.querySelector("i");
+    if (icon) {
+        if (navbarMenu.classList.contains("show")) {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-xmark");
+        } else {
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+        }
+    }
+}
+
+// Close mobile menu & reset icon when any link is clicked
 navLinks.forEach(function (link) {
     link.addEventListener("click", function () {
-        if (navbarMenu) {
+        if (navbarMenu && navbarMenu.classList.contains("show")) {
             navbarMenu.classList.remove("show");
-        }
-
-        if (menuButton) {
-            const icon = menuButton.querySelector("i");
-            if (icon) {
-                icon.classList.remove("fa-xmark");
-                icon.classList.add("fa-bars");
-            }
+            updateMenuIcon();
         }
     });
 });
-
 
 /* =========================
    DARK MODE
