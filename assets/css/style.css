@@ -499,11 +499,11 @@ a {
     align-items: center;
     justify-content: center;
     gap: 12px;
-    padding: 0.75rem 0.5rem;
+    padding: 10px 8px;
     background: var(--card-background);
     border: 1px solid var(--border);
     border-radius: 10px;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     text-align: center;
     transition: transform var(--transition), box-shadow var(--transition);
 }
@@ -799,26 +799,27 @@ footer p {
         padding: 70px 0;
     }
 
-
     .hero h1 {
         font-size: 3rem;
     }
-
 
     .hero h2 {
         font-size: 1.4rem;
     }
 
-
     .hero-buttons {
         flex-direction: column;
     }
 
-
     .skills-grid {
-        grid-template-columns: 1fr; /* <--- CHANGE THIS LINE TO: repeat(2, 1fr); */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
 
+    .skill-card {
+        padding: 10px 8px;
+        font-size: 0.8rem;
+    }
 
     .contact-buttons {
         flex-direction: column;
