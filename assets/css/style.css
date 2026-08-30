@@ -495,23 +495,17 @@ a {
 
 
 .skill-card {
-    background: var(--card-background);
-
-    border: 1px solid var(--border);
-
-    padding: 20px;
-
-    border-radius: 10px;
-
     display: flex;
-
     align-items: center;
-
+    justify-content: center;
     gap: 12px;
-
-    transition:
-        transform var(--transition),
-        box-shadow var(--transition);
+    padding: 0.75rem 0.5rem;
+    background: var(--card-background);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 0.85rem;
+    text-align: center;
+    transition: transform var(--transition), box-shadow var(--transition);
 }
 
 
@@ -822,7 +816,7 @@ footer p {
 
 
     .skills-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* <--- CHANGE THIS LINE TO: repeat(2, 1fr); */
     }
 
 
