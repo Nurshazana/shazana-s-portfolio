@@ -916,3 +916,123 @@ body:not(.dark-mode) .project-modal-content {
         grid-template-columns: 1fr; /* 1 per row on mobile phones */
     }
 }
+
+/* =========================
+   CERTIFICATES SECTION (4 COLUMNS)
+========================= */
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 boxes per row */
+    gap: 1.25rem;
+}
+
+.certificate-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.certificate-img-wrapper {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background-color: #f8f9fa;
+}
+
+.certificate-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.certificate-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.certificate-img-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+.certificate-img-wrapper:hover .certificate-overlay {
+    opacity: 1;
+}
+
+.certificate-info {
+    padding: 1rem;
+}
+
+.certificate-info h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+.certificate-info .issuer {
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin-bottom: 0;
+}
+
+/* Modal styling for Certificates */
+.cert-modal-content {
+    background-color: #1e1e24;
+    color: #ffffff;
+    border-radius: 12px;
+}
+
+/* Dark mode styles */
+body.dark-mode .certificate-card {
+    background-color: #1e1e24;
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .certificate-info h4 {
+    color: #ffffff;
+}
+
+body.dark-mode .certificate-info .issuer {
+    color: #a0a0a0;
+}
+
+/* Responsive grid rules */
+@media (max-width: 1199px) {
+    .certificates-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 per row on laptops */
+    }
+}
+
+@media (max-width: 991px) {
+    .certificates-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+    }
+}
+
+@media (max-width: 576px) {
+    .certificates-grid {
+        grid-template-columns: 1fr; /* 1 per row on mobile phones */
+    }
+}
