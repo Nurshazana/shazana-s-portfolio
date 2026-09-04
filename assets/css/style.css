@@ -1323,3 +1323,109 @@ body.dark-mode .certificate-info .issuer {
         font-size: 0.78rem;
     }
 }
+
+/* =========================
+   POLISHED CARD SYSTEM
+========================= */
+
+.info-card,
+.skill-card,
+.certificate-card,
+.project-card,
+.timeline-content {
+    border-radius: 12px;
+    border-color: var(--border);
+    box-shadow: var(--shadow);
+}
+
+.info-card,
+.skill-card,
+.certificate-card,
+.timeline-content {
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.info-card:hover,
+.skill-card:hover,
+.certificate-card:hover,
+.timeline-content:hover {
+    transform: translateY(-5px);
+    border-color: rgba(108, 99, 255, 0.35);
+    box-shadow: 0 16px 35px rgba(108, 99, 255, 0.14);
+}
+
+.project-card {
+    padding: 24px;
+    min-height: 300px;
+    border-top: 3px solid transparent;
+}
+
+.project-card:hover {
+    border-top-color: var(--primary);
+}
+
+.hero-buttons .btn,
+.contact-buttons .btn {
+    min-height: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-button {
+    width: 42px;
+    height: 42px;
+    display: inline-grid;
+    place-items: center;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+}
+
+.theme-button:hover {
+    background: var(--background-alt);
+    border-color: var(--primary);
+}
+
+/* Four cards on wide desktops, then scale down without compressing content. */
+@media (max-width: 1199px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 991px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        min-height: 0;
+        padding: 22px;
+    }
+
+    .hero-buttons {
+        gap: 10px;
+    }
+
+    .availability-status {
+        font-size: 0.9rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

@@ -99,6 +99,12 @@ if (themeButton) {
 
 const revealElements = document.querySelectorAll(".reveal");
 
+document.querySelectorAll(".projects-grid, .skills-grid, .certificates-grid").forEach(function (grid) {
+    grid.querySelectorAll(".reveal").forEach(function (card, index) {
+        card.style.transitionDelay = Math.min(index * 70, 350) + "ms";
+    });
+});
+
 const observer = new IntersectionObserver(
     function (entries) {
         entries.forEach(function (entry) {
