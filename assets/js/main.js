@@ -9,6 +9,14 @@
 const menuButton = document.getElementById("menuButton");
 const navbarMenu = document.getElementById("navbarMenu");
 const navLinks = document.querySelectorAll(".nav-link");
+const pageLoader = document.getElementById("pageLoader");
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("load", function () {
+    if (pageLoader) {
+        pageLoader.classList.add("is-hidden");
+    }
+});
 
 if (menuButton && navbarMenu) {
     // Toggle menu open/close on button click
@@ -134,4 +142,14 @@ window.addEventListener("scroll", function () {
             link.classList.add("active");
         }
     });
+
+    if (backToTop) {
+        backToTop.classList.toggle("is-visible", window.scrollY > 500);
+    }
 });
+
+if (backToTop) {
+    backToTop.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+}
