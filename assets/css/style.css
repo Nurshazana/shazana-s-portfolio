@@ -555,7 +555,7 @@ a {
     display: grid;
 
     grid-template-columns:
-        repeat(3, 1fr);
+        repeat(4, 1fr);
 
     gap: 25px;
 }
@@ -923,12 +923,12 @@ body:not(.dark-mode) .project-modal-content {
     color: #ffffff;
 }
 /* =========================
-   PROJECTS GRID (3 COLUMNS)
+   PROJECTS GRID (4 COLUMNS)
 ========================= */
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
 }
 
