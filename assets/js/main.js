@@ -70,32 +70,35 @@ navLinks.forEach(function (link) {
 ========================= */
 
 const themeButton = document.getElementById("themeButton");
+const themeIcon = themeButton ? themeButton.querySelector("i") : null;
 
-if (themeButton) {
-    const themeIcon = themeButton.querySelector("i");
-
-    function setTheme(theme) {
-        if (theme === "dark") {
-            document.body.classList.add("dark-mode");
-            if (themeIcon) {
-                themeIcon.classList.remove("fa-moon");
-                themeIcon.classList.add("fa-sun");
-            }
-        } else {
-            document.body.classList.remove("dark-mode");
-            if (themeIcon) {
-                themeIcon.classList.remove("fa-sun");
-                themeIcon.classList.add("fa-moon");
-            }
+function setTheme(theme) {
+    if (theme === "dark") {
+        document.body.classList.add("dark-mode");
+        if (themeIcon) {
+            themeIcon.classList.remove("fa-moon");
+            themeIcon.classList.add("fa-sun");
+        }
+    } else {
+        document.body.classList.remove("dark-mode");
+        if (themeIcon) {
+            themeIcon.classList.remove("fa-sun");
+            themeIcon.classList.add("fa-moon");
         }
     }
+}
 
-    /* Load saved theme */
-    const savedTheme = localStorage.getItem("portfolio-theme");
-    if (savedTheme) {
-        setTheme(savedTheme);
+/* Apply the shared theme on every page, including pages without a toggle. */
+setTheme(localStorage.getItem("portfolio-theme"));
+
+/* Keep other open portfolio pages in sync with the selected theme. */
+window.addEventListener("storage", function (event) {
+    if (event.storageArea === localStorage && (event.key === "portfolio-theme" || event.key === null)) {
+        setTheme(event.newValue);
     }
+});
 
+if (themeButton) {
     /* Toggle theme */
     themeButton.addEventListener("click", function () {
         const isDark = document.body.classList.contains("dark-mode");
