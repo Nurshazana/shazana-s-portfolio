@@ -6,6 +6,20 @@
    MOBILE MENU & TOGGLE
 ========================= */
 
+const certificationsToggle = document.getElementById("certificationsToggle");
+const moreCertifications = document.getElementById("moreCertifications");
+
+if (certificationsToggle && moreCertifications) {
+    certificationsToggle.addEventListener("click", function () {
+        const expanded = certificationsToggle.getAttribute("aria-expanded") !== "true";
+        moreCertifications.hidden = !expanded;
+        certificationsToggle.setAttribute("aria-expanded", String(expanded));
+        certificationsToggle.textContent = expanded
+            ? "View Fewer Certifications"
+            : "View More Certifications";
+    });
+}
+
 const menuButton = document.getElementById("menuButton");
 const navbarMenu = document.getElementById("navbarMenu");
 const navLinks = document.querySelectorAll(".nav-link");

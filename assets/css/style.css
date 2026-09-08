@@ -503,6 +503,62 @@ a {
    SKILLS
 ========================= */
 
+.skill-categories {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.skill-category {
+    padding: 24px;
+    background: var(--card-background);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.skill-category h3 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    font-size: 1.15rem;
+    line-height: 1.4;
+}
+
+.skill-category h3 i {
+    color: var(--primary);
+}
+
+.skill-category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.skill-category-list li {
+    padding: 7px 11px;
+    border-radius: 6px;
+    background: var(--background-alt);
+    color: var(--text);
+    font-size: 0.9rem;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 575px) {
+    .skill-categories {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .skill-category {
+        padding: 20px;
+    }
+}
+
 .skills-grid {
     display: grid;
 
