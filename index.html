@@ -615,22 +615,25 @@
         <!-- Responsive project grid: four columns on large screens -->
         <div class="projects-grid">
 
-            <!-- PROJECT CARD 1 
+            <!-- PROJECT CARD 1 -->
             <article class="project-card reveal" data-bs-toggle="modal" data-bs-target="#projectModal1" style="cursor: pointer;">
                 <div class="project-icon">
                     <i class="fa-solid fa-folder-open"></i>
                 </div>
-                <h3>Smart IT Incident Diagnosis & Escalation System</h3>
-                <p>The system determines:Potential cause: DNS / application-specific connectivity issue</p>
+                <h3>Smart IT Incident Diagnosis &amp; Escalation System</h3>
+                <p>An AI-assisted incident management system that helps IT support teams investigate service disruptions, coordinate responses, and track incidents through resolution.</p>
                 <div class="technology-list">
-                    <span>Laravel</span>
-                    <span>Bootstrap</span>
-                    <span>MySQL</span>
+                    <span>Python</span>
+                    <span>FastAPI</span>
+                    <span>Streamlit</span>
+                    <span>PostgreSQL</span>
+                    <span>Ollama (Llama 3.2)</span>
+                    <span>PostgreSQL Full-Text Search</span>
                 </div>
-                <span class="project-link mt-3 d-inline-block">
+                <button type="button" class="project-link mt-3 d-inline-block border-0 bg-transparent p-0 text-start" data-bs-toggle="modal" data-bs-target="#projectModal1" aria-label="View details of Smart IT Incident Diagnosis and Escalation System">
                     View Details <i class="fa-solid fa-arrow-right"></i>
-                </span>
-            </article> -->
+                </button>
+            </article>
 
             <!-- PROJECT CARD 2 -->
             <article class="project-card reveal" data-bs-toggle="modal" data-bs-target="#projectModal2" style="cursor: pointer;">
@@ -723,7 +726,7 @@
                     <span class="dot dot-yellow"></span>
                     <span class="dot dot-green"></span>
                 </div>
-                <h6 class="modal-title text-center w-100 mb-0" id="projectModal1Label">Smart IT Incident Diagnosis & Escalation System - 2026</h6>
+                <h6 class="modal-title text-center w-100 mb-0" id="projectModal1Label">Smart IT Incident Diagnosis &amp; Escalation System - 2026</h6>
     <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
@@ -734,7 +737,24 @@
                     <!-- Left: Preview Image & Links -->
                     <div class="col-md-6 text-center">
                         <div class="project-modal-img-wrapper mb-3">
-                            <img src="assets/images/dummy-project1.jpg" alt="Project Screenshot" class="img-fluid rounded">
+                            <a href="assets/images/side1.png" target="_blank" rel="noopener noreferrer" aria-label="Open incident management screenshot 1 at full size">
+                                <img src="assets/images/side1.png" alt="Incident management system screenshot 1" class="img-fluid rounded" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="project-modal-img-wrapper mb-3">
+                            <a href="assets/images/side2.png" target="_blank" rel="noopener noreferrer" aria-label="Open incident management screenshot 2 at full size">
+                                <img src="assets/images/side2.png" alt="Incident management system screenshot 2" class="img-fluid rounded" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="project-modal-img-wrapper mb-3">
+                            <a href="assets/images/side3.png" target="_blank" rel="noopener noreferrer" aria-label="Open incident management screenshot 3 at full size">
+                                <img src="assets/images/side3.png" alt="Incident management system screenshot 3" class="img-fluid rounded" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="project-modal-img-wrapper mb-3">
+                            <a href="assets/images/side4.png" target="_blank" rel="noopener noreferrer" aria-label="Open incident management screenshot 4 at full size">
+                                <img src="assets/images/side4.png" alt="Incident management system screenshot 4" class="img-fluid rounded" loading="lazy">
+                            </a>
                         </div>
                         <div class="d-flex justify-content-center gap-2">
                         </div>
@@ -744,16 +764,25 @@
                     <div class="col-md-6">
                         <h4 class="mb-3">About the Project</h4>
                         <p class="project-modal-desc mb-4">
-                            This project is a smart IT incident diagnosis and escalation system that helps IT teams quickly identify and resolve issues. It features automated diagnostics, escalation workflows, and real-time monitoring to improve response times and reduce downtime.
+                            An AI-assisted incident management system that helps IT support teams investigate service disruptions, coordinate responses, and track incidents through resolution.
+                        </p>
+                        <p class="project-modal-desc mb-4">
+                            The system uses a locally hosted AI model with RAG to analyze incident symptoms, logs, telemetry, runbooks, and historical incidents, providing evidence-based root cause and recovery recommendations for human review. It also supports automated assignment, duplicate detection, SLA monitoring and escalation, role-based access, audit trails, and sandbox remediation simulations.
                         </p>
 
-                        <h5 class="h6 text-uppercase text-muted mb-2">Core Technologies</h5>
+                        <h5 class="h6 text-uppercase mb-2">Technology</h5>
                         <div class="d-flex flex-wrap gap-2">
-                            <span class="badge bg-secondary">Laravel</span>
-                            <span class="badge bg-secondary">Bootstrap</span>
-                            <span class="badge bg-secondary">MySQL</span>
-                            <span class="badge bg-secondary">Google Auth</span>
+                            <span class="badge bg-secondary">Python</span>
+                            <span class="badge bg-secondary">FastAPI</span>
+                            <span class="badge bg-secondary">Streamlit</span>
+                            <span class="badge bg-secondary">PostgreSQL</span>
+                            <span class="badge bg-secondary">Ollama (Llama 3.2)</span>
+                            <span class="badge bg-secondary text-wrap text-start">PostgreSQL Full-Text Search</span>
                         </div>
+                        <h5 class="h6 text-uppercase mt-4 mb-2">Current Scope</h5>
+                        <p class="project-modal-desc mb-0">
+                            Working local prototype with human-reviewed AI recommendations, notification previews, and sandbox-only automated remediation.
+                        </p>
                     </div>
 
                 </div>
