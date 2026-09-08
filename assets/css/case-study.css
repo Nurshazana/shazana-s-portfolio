@@ -24,6 +24,10 @@
 .case-panel p:last-child { margin-bottom: 0; }
 .case-architecture { text-align: center; display: grid; gap: 12px; padding: 24px; background: var(--background-alt); border-radius: 12px; }
 .case-architecture strong { color: var(--primary); }
+.architecture-node { font-family: inherit; font-size: 1rem; font-weight: 500; line-height: 1.7; color: var(--text); overflow-wrap: anywhere; }
+.architecture-branches { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.architecture-branch { display: grid; align-content: start; gap: 12px; }
+.architecture-arrow { font-family: inherit; font-size: 1.5rem; font-weight: 400; line-height: 1; color: var(--primary); }
 .case-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
 .case-pending { font-size: .85rem; color: var(--text-light); }
 @media (max-width: 575px) {
